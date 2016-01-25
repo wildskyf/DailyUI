@@ -6,18 +6,50 @@ layout: nil
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 	<title>DailyUI</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ site.baseurl }}/website.css">
 </head>
-<body>
-	<h1>Implement UI</h1>
-	<ul>
-		{% for page in site.pages %}
-		{% if page.notinc == nil %}
-		<li>
-			<a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a>
-		</li>
-		{% endif %}
-		{% endfor %}
-	</ul>
+<body id="index">
+	<header>
+		<h1>Give Daily UI works life!</h1>
+		<p>
+			Daily UI is a good activity, it trains many great designers and makes them produce lots of works!
+			In order to sharpen my front-end skill, I decided to implement those designs!
+		</p>
+	</header>
+	<div id="main">
+		<table>
+			<tr>
+				<th>Implement Link</th>
+				<th>Origin Post of Work</th>
+			</tr>
+			{% for page in site.pages %}
+			{% if page.notinc == nil %}
+			<tr>
+				<td>
+					<a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a>
+				</td>
+				<td>
+					<a href="{{ page.origin_link }}">{{ page.origin_link }}</a>
+				</td>
+			</tr>
+			{% endif %}
+			{% endfor %}
+			<tr>
+				<td>
+					Working...
+				</td>
+				<td>
+					To Be Continued...
+				</td>
+			</tr>
+		</table>
+	</div>
+	<footer>
+		<a href="https://github.com/wi1d5ky/DailyUI">Source code</a>
+	</footer>
 </body>
 </html>

@@ -5,6 +5,13 @@ notinc: true
 body {
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	transition-duration: .2s;
 }
 
 #og_link {
@@ -19,4 +26,81 @@ body {
     color: white;
     font-weight: 600;
     text-decoration: none;
+}
+
+#index {
+	header {
+		background: #FAFAFA;
+		color: #676767;
+		padding: 1rem 2rem 2rem;
+		@media screen and (max-width: 767px) {
+			padding: 1rem 1rem 2rem;
+		}
+		h1 {
+			border-bottom: 1px solid #aaa;
+			font-family: 'Lato', sans-serif;
+			font-size: 2.5rem;
+			font-weight: 300;
+			margin: 0;
+			padding-bottom: 5px;
+			@media screen and (max-width: 767px) {
+				font-size: 1.75rem;
+			}
+		}
+		p {
+			color: #888;
+			line-height: 1.5rem;
+			font-size: .75rem;
+			width: 80%;
+		}
+	}
+	#main {
+		flex: 1;
+		padding: 2rem 1rem;
+		@media screen and (max-width: 767px) {
+			padding: 0;
+		}
+		table {
+			border-collapse:collapse;
+			margin: 0 auto;
+			overflow: auto;
+			tr td {
+				color: #666;
+				border: 1px solid #ccc;
+				font-family: 'Roboto', sans-serif;
+				padding: 1rem 2rem;
+				@media screen and (max-width: 767px) {
+					overflow:hidden;
+					padding: 1rem .75rem;
+					text-overflow:ellipsis;
+				}
+				a {
+					color: #08C;
+					text-decoration: none;
+					&:hover {
+						color: #06a;
+					}
+				}
+			}
+			tr th {
+				@extend td;
+				font-family: 'Lato', sans-serif;
+				font-weight: 700;
+			}
+		}
+	}
+	footer {
+		background: #555;
+		padding: 1rem;
+		text-align: center;
+		a {
+			border-bottom: 1px dashed #ccc;
+			color: #ccc;
+			text-decoration: none;
+			&:hover {
+				border-bottom: 1px dashed #fff;
+				color: #fff;
+			}
+		}
+	}
 }
