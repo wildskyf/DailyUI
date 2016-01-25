@@ -1,0 +1,108 @@
+---
+notinc: true
+---
+
+@import url(https://fonts.googleapis.com/css?family=Hind:400,500,700,300);
+
+body {
+	background: url('271_rocky_ocean_coast.jpg') top center;
+	background-size: cover;
+	font-family: 'Hind', sans-serif;
+}
+
+$form-margin-top: 60px;
+
+.background-image {
+	box-shadow: 0 0 20px rgba(0,0,0,.5);
+	margin: $form-margin-top auto;
+	padding: 2rem 2rem 3rem;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	display: block;
+	background-image: url('271_rocky_ocean_coast.jpg');
+	background-position: center -1 * $form-margin-top;
+	background-size: 100vw auto;
+	width: 250px;
+	height: 475px;
+
+	$blur-lv:2.5px;
+	-webkit-filter: blur($blur-lv);
+	-moz-filter: blur($blur-lv);
+	-o-filter: blur($blur-lv);
+	-ms-filter: blur($blur-lv);
+	filter: blur($blur-lv);
+}
+
+form {
+	background: linear-gradient(rgba(10,25,35,.375) 0%, rgba(255,255,255,0) 45%,rgba(255,255,255,.1) 100%);
+	border: 5px solid #fff;
+	box-shadow: 0 10px 50px rgba(0,0,0,.2);
+	margin: $form-margin-top auto;
+	padding: 2rem 2rem 3rem;
+	width: 250px;
+	height: 475px;
+
+	#signin {
+		color: #fff;
+		text-decoration: none;
+		margin: 0 .5rem;
+	}
+	#signup {
+		@extend #signin;
+		border-bottom: 2px solid #fff;
+		font-weight: 800;
+		padding: 2px 4px;
+	}
+
+	h1 {
+		color: #fff;
+		font-size: 2.25rem;
+		line-height: 2.75rem;
+		margin: 2rem 0 1.5rem;
+		text-align: center;
+		text-shadow: 1px 1px 2px #888;
+	}
+	label {
+		color: #fff;
+		display: block;
+		font-weight: 500;
+		padding: .25rem;
+	}
+	input {
+		background-color: rgba(0,0,0,.2);
+		border: 0;
+		border-radius: 1rem;
+		color: #fff;
+		line-height: 1.5rem;
+		margin-bottom: .5rem;
+		outline: none;
+		padding: 0 5%;
+		width: 90%;
+		&[type="submit"] {
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 2px 5px #444;
+			color: #39393B;
+			cursor: pointer;
+			display: block;
+			font-size: 1rem;
+			font-weight: 700;
+			margin: 4.5rem auto 0;
+			position: relative;
+			padding: .1rem 0;
+			width: 90%;
+		}
+	}
+	#tos {
+		color: #fff;
+		font-size: .75rem;
+		margin: 1rem auto;
+		max-width: 85%;
+		text-align: center;
+	}
+}

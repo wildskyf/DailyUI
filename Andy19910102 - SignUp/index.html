@@ -1,0 +1,30 @@
+---
+title: "Andy Huang - SignUp"
+origin_link: "https://twitter.com/andy19910102/status/654697998862041090/photo/1"
+---
+<div class="background-image" id="form_bg"></div>
+<form onsubmit="alert('Yo!')" id="theform">
+	<a href="#" id="signin">SIGN IN</a>
+	<a href="#" id="signup">SIGN UP</a>
+	<h1>Daily UI x100 Challenge</h1>
+	<label for="email">USERNAME</label>
+	<input type="email">
+	<label for="pwd">PASSWORD</label>
+	<input type="password">
+	<input type="submit" value="SIGN UP">
+	<p id="tos">
+		By signing up, you agree to the Terms of Service and Privacy Policy.
+	</p>
+</form>
+
+<script>
+	var body = document.body, html = document.documentElement;
+	var bg = document.getElementById("form_bg");
+	var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+	var width = Math.max( body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth );
+	bg.style.backgroundSize = height > width ? "auto " + height + "px" : "100vw auto";
+	window.onscroll = function() {
+		var fromTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+		bg.style.margin = (60 - fromTop) + 'px auto 0px';
+	};
+</script>
