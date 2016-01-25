@@ -1,0 +1,22 @@
+---
+notinc: true
+---
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#og_link {
+	box-shadow: 0 0 10px #555;
+    float: right;
+    transform: rotate(37deg);
+    position: fixed;
+    right: -3rem;
+    top: .5rem;
+    padding: .75rem 3rem;
+    background: #2196f3;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}

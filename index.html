@@ -1,0 +1,23 @@
+---
+notinc: true
+layout: nil
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DailyUI</title>
+</head>
+<body>
+	<h1>Implement UI</h1>
+	<ul>
+		{% for page in site.pages %}
+		{% if page.notinc == nil %}
+		<li>
+			<a href="{{ site.baseurl }}/{{ page.path }}">{{ page.title }}</a>
+		</li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+</body>
+</html>
